@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitação</title>
+</head>
+<body>
+    <h1>Tire sua Habilitação</h1>
+    <p>
+        Insira sua Idade: <input type="number" id="age">
+        <button onclick="calcular()">Calcular</button>
+    </p>
+    <div id="res">Resultado...</div>
+
+    <script>
+        function calcular(){
+            let age = document.getElementById("age").value
+            let res = document.getElementById("res")
+
+            if(age >= 18){
+                res.innerHTML = (`Cidadão apto a tirar a habilitação.`)                
+            } else{
+                res.innerHTML = (`Não é possível tirar a habilitação.`)
+            }
+        }
+    </script>
+</body>
+</html>

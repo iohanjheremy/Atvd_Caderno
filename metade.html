@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metade dos Valores</title>
+</head>
+<body>
+    <h1>Calculadora de metade</h1>
+    <div id="res"> Resultado: </div>
+</body>
+<script>
+    for(let i = 1; i <= 10; i++){
+        let res = document.getElementById("res")
+        var num = prompt("Digite o " +i+ " ° número") 
+        let metade = num / 2
+        document.write(`A metade de ${num} é = ${metade}<br>`)
+    }
+</script>
+<body>
+</html>
+<!-- PROMPT = exibe uma msg para o usuario, atribuir a uma variavel para guardar o valor inserido-->

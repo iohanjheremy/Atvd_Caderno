@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leia e Exiba</title>
+</head>
+<body>
+    <p>
+        Digite sua Idade: <input type="number" id="idade"> <br><br>
+        Digite seu Nome: <input type="text" id="nome"> <br>
+        <button onclick="exibir()">Exibir</button>
+    </p>
+
+    <div id="res"> Resultado...</div>
+
+    <script>
+        function exibir(){
+            let idade = document.getElementById('idade')
+            let nome = document.getElementById('nome')
+            let res = document.getElementById('res')
+
+            res.innerHTML= (`Idade = ${idade.value} anos <br> Nome: ${nome.value}`)
+        }
+    </script>
+</body>
+</html>

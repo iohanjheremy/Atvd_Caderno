@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LER A, B, C</title>
+</head>
+<body>
+    <h1>Leia e Some os Valores</h1>
+    <h3>Mostre os valores se a soma entre A e B for menor que C</h3>
+    <p>
+        Insira o valor de A = <input type="number" id="a"> <br>
+        Insira o valor de B = <input type="number" id="b"> <br>
+        Insira o valor de C = <input type="number" id="c"> <br>
+        <button onclick="calcular()">Calcular</button> <br>
+
+        <div id="res">Resultado...</div>
+    </p>
+
+    <script>
+        function calcular(){
+            let a = document.getElementById("a").value
+            let b = document.getElementById("b").value
+            let c = document.getElementById("c").value
+
+            let res = document.getElementById("res")
+
+            let soma = parseInt(a) + parseInt(b)
+            if(soma < c){
+                res.innerHTML = (`O valor de A é = ${a} <br> O valor de B é = ${b} <br> O valor de C é = ${c} <br><br> 
+                A soma entre ${a} e ${b} é = ${soma}`)
+            } else{
+                res.innerHTML = ("O valor de A + B não é menor que C")
+            }
+        }
+    </script>
+</body>
+</html>

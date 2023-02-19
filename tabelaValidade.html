@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código dos Produtos</title>
+</head>
+<body>
+    <h1>Consulta</h1>
+    <p>
+        Digite um codigo de 1 a 15: <input type="number" id="codigo">
+        <button onclick="verificar()">Verificar</button>
+    </p>
+    <div id="res">Resultado...</div>
+
+    <script>
+        function verificar(){
+            let codigo = parseInt(document.getElementById("codigo").value)
+            let res = document.getElementById("res")
+
+            switch(codigo){
+                case 1:
+                    res.innerHTML = ("Alimento não-perecível");
+                    break;
+                    
+                case 2: case 3: case 4:
+                    res.innerHTML = ("Alimento perecível");
+                    break;
+                    
+                case 5: case 6:
+                    res.innerHTML = ("Vestuário");
+                    break;
+                    
+                case 7:
+                    res.innerHTML =  ("Higiene Pessoal");
+                    break;
+                    
+                case 8: case 9: case 10: case 11: case 12: case 13: case 14:  case 15:
+                    res.innerHTML =  ("Limpeza e Utensílios domésticos");
+                    break;
+                    
+                default:
+                    res.innerHTML = ("Código Inválido");
+            }
+		
+        }
+    </script>
+
+</body>
+</html>

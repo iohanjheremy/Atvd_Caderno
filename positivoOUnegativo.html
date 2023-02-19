@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positivo ou Negativo</title>
+</head>
+<body>
+    <h1>Positivo ou Negativo</h1>
+    <p>
+        Digite um numero: <input type="number" id="n1">
+        <button onclick="calcular()">Calcular</button>
+    </p>
+
+    <div id="res">Resultado...</div>
+
+    <script>
+        function calcular(){
+            let n1 = document.getElementById("n1").value 
+            let res = document.getElementById("res")
+            
+            if(n1 >= 0){
+                res.innerHTML = (`O numero ${n1} é Positivo`)
+            } else(
+                res.innerHTML = (`O numero ${n1} é Negativo`)
+            )
+        }
+    </script>
+</body>
+</html>

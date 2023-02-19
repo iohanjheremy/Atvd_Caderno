@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucessor e Antecessor</title>
+</head>
+<body>
+    <h1>Sucessor e Antecessor</h1>
+    <p>
+        Insira um numero: <input type="number" id="n1">
+        <button onclick="verificar()">Verificar</button>
+    </p>
+    <div id="res">Resultado...</div>
+
+    <script>
+        function verificar(){
+            let n1 = parseInt(document.getElementById("n1").value) //parseInt transforma string em Inteiro
+            let res = document.getElementById("res")
+            let ant = n1-1
+            let suc = n1+1
+            
+            res.innerHTML = (`O número ${n1} tem como Antecessor: ${ant}  e como Sucessor: ${suc}`)
+        }
+    </script>  
+</body>
+</html>
